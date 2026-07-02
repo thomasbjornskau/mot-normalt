@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MOT NORMALT! – Vær mot normalen</title>
+  <meta name="description" content="Maksimumstemperatur siste 90 dager sammenlignet med historisk normal (1991–2020) for norske værstasjoner.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-title" aria-label="Mot normalt – vær mot normalen">
+      MOT NORMALT<span class="bang">!</span>
+    </h1>
+    <p class="lede">Maksimumstemperatur siste 90 dager sammenlignet med historisk
+      normal for samme sted.</p>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Valg av sted og periode">
+      <label class="control">
+        <span>Sted</span>
+        <select id="station-select"></select>
+      </label>
+      <label class="control">
+        <span>Sluttdato</span>
+        <input type="date" id="end-date">
+      </label>
+      <button id="reset-btn" type="button">Tilbakestill til siste 90 dager</button>
+    </section>
+
+    <p class="notice" id="notice" role="status" hidden></p>
+
+    <figure class="chart-figure">
+      <div id="chart" role="img"
+           aria-label="Graf som viser daglig maksimumstemperatur de siste 90 dagene sammenlignet med historisk normal og normalvariasjon. Røde flater viser dager over normalen, blå flater dager under normalen."></div>
+      <figcaption class="legend" aria-hidden="false">
+        <span class="legend-item"><span class="swatch swatch-normal"></span>Normal (1991–2020)</span>
+        <span class="legend-item"><span class="swatch swatch-band"></span>Normalvariasjon (5.–95.-persentil)</span>
+        <span class="legend-item"><span class="swatch swatch-warm"></span>Over normalen</span>
+        <span class="legend-item"><span class="swatch swatch-cold"></span>Under normalen</span>
+      </figcaption>
+    </figure>
+
+    <section id="explanation" class="explanation" aria-live="polite"></section>
+
+    <details class="about">
+      <summary>Om dataene og begrensninger</summary>
+      <ul>
+        <li>Appen viser historiske observasjoner, ikke værvarsel.</li>
+        <li>Normalen er beregnet empirisk fra observasjoner ved valgt stasjon i
+          perioden 1991–2020, dag for dag, med et vindu på ±15 kalenderdager og
+          lett glatting.</li>
+        <li>Det grå båndet viser historisk normalvariasjon (5.–95.-persentil),
+          ikke usikkerhet i en prognose.</li>
+        <li>Stasjonsdata kan ha hull. Manglende døgn vises som brudd i kurven og
+          bryter periodetellingen.</li>
+        <li>Stasjoner kan ha flyttet, endret instrumentering eller hatt
+          driftsavbrudd i baselineperioden.</li>
+        <li>Sammenligningen gjelder valgt stasjon, ikke nødvendigvis hele
+          kommunen eller regionen.</li>
+      </ul>
+    </details>
+  </main>
+
+  <footer class="site-footer">
+    <p id="source-line">Data til og med <span id="latest-date">–</span>.
+      Kilde: <span id="source-name">Meteorologisk institutt / Frost</span>.</p>
+  </footer>
+
+  <div id="tooltip" class="tooltip" hidden></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+  <script src="src/chart.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
