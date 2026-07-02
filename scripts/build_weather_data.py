@@ -3,7 +3,7 @@
 
 Kjøres lokalt eller i GitHub Actions:
 
-    export FROST_CLIENT_ID=...
+    export FROST_CLIENT_ID=1c1b7aec-0840-46ed-8d96-ef4240c19267
     python scripts/build_weather_data.py
 
 For hver stasjon i WANTED_STATIONS:
