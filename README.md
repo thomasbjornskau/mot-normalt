@@ -6,6 +6,8 @@ samme kalenderdagene. Røde flater viser dager over normalen, blå flater dager
 under. Sammenhengende perioder på minst sju døgn utenfor normalvariasjonen
 markeres automatisk i grafen og oppsummeres i tekst.
 
+Applikasjon: https://thomasbjornskau.github.io/mot-normalt/index.html (https://thomasbjornskau.github.io/mot-normalt/index.html)
+
 Dette er **ikke** en værvarsel-app. Den viser bare historiske observasjoner.
 
 ## Datakilde
