@@ -1,0 +1,35 @@
+[
+  {
+    "id": "SN18700",
+    "name": "Oslo - Blindern",
+    "municipality": "Oslo",
+    "county": "Oslo",
+    "lat": 59.94,
+    "lon": 10.72,
+    "elevation_m": 94,
+    "source": "DEMO - syntetiske data",
+    "last_updated": "2026-07-01"
+  },
+  {
+    "id": "SN50540",
+    "name": "Bergen - Florida",
+    "municipality": "Bergen",
+    "county": "Vestland",
+    "lat": 60.38,
+    "lon": 5.33,
+    "elevation_m": 12,
+    "source": "DEMO - syntetiske data",
+    "last_updated": "2026-07-01"
+  },
+  {
+    "id": "SN90450",
+    "name": "Tromsø",
+    "municipality": "Tromsø",
+    "county": "Troms",
+    "lat": 69.65,
+    "lon": 18.94,
+    "elevation_m": 100,
+    "source": "DEMO - syntetiske data",
+    "last_updated": "2026-07-01"
+  }
+]
